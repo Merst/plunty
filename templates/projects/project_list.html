@@ -1,0 +1,20 @@
+{% extends "base_generic.html" %}
+
+{% block content %}
+  <h1>My projects</h1>
+  {% if project_list %}
+  <ul>
+    {% for project in project_list %}
+      <li>
+        <div class='title'>{{project.title}}</div>: {{project.summary}}
+        <br>
+        Tech used: 
+        <br>
+        Repo link: {{project.github_link}}
+      </li>
+    {% endfor %}
+  </ul>
+  {% else %}
+    <p>No projects were currently submitted.</p>
+  {% endif %}
+{% endblock %}
