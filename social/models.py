@@ -8,17 +8,17 @@ class CustomUser(AbstractUser):
     def __str__(self):
         return self.username
 
-
-class Plunt():
-    # owner = 
+"""
+class Plunt(models.Model):
+    # owner =  models.ForeignKey('CustomUser', on_delete=models.SET_NULL, null=True)
     nickname = models.CharField(max_length=200)
     # species = 
     # description
 
-class Picture():
+class Picture(models.Model):
     plunt = models.ForeignKey(Plunt, on_delete=models.SET_NULL, null=True)
 
 
-
-class Species():
+class Species(models.Model):
     name = models.CharField(max_length=200)
+"""

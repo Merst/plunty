@@ -2,13 +2,15 @@
 
 {% block content %}
   <h1>My projects</h1>
+
+  This is a list of the projects I've recently been working on.
   {% if project_list %}
   <ul>
     {% for project in project_list %}
       <li>
         <div class='title'>{{project.title}}</div>: {{project.summary}}
         <br>
-        Tech used: 
+        Tech used: {{project.skill.all}}
         <br>
         Repo link: {{project.github_link}}
       </li>

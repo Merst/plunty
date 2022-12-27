@@ -1,0 +1,64 @@
+{% extends "base_generic.html" %}
+    {% block sidebar %}
+      <div class="d-flex flex-column flex-shrink-0 p-2 bg-highlight">
+        <ul class="nav nav-pills flex-column mb-auto">
+          <li class="nav-item">
+            <a href="#" class="nav-link active" aria-current="page">
+              <svg class="bi pe-none me-2" width="16" height="16"><use xlink:href="#home"></use></svg>
+              Home
+            </a>
+          </li>
+          <li>
+            <a href="#" class="nav-link link-dark">
+              <!-- TODO add svg -->
+              Attempts History
+            </a>
+          </li>
+          <li>
+            <a href="#" class="nav-link link-dark">
+              <!-- TODO add svg -->
+              Categories
+            </a>
+          </li>
+          <li>
+            <a href="#" class="nav-link link-dark">
+              <!-- TODO add svg -->
+              Frequency Analysis
+            </a>
+          </li>
+          <li>
+            <a href="#" class="nav-link link-dark">
+              <!-- TODO add svg -->
+              Distribution
+            </a>
+          </li>
+        </ul>
+      </div>
+    {% endblock %}
+
+    {% block header %}
+      <div class="d-flex">
+        <section class="bg-dark text-light p-5 flex-fill">
+        <div class="container">
+          <h1>Mentor App</h1>
+          <p>
+            The road to the mentor roulette grind!
+          </p>
+        </div>
+
+        <div class="container">
+          <!-- Progress Bar -->
+          <h1>
+
+            {{ success }} / 2000 ({{ progress_rate }})
+          </h1>
+          <div class="progress">
+            <div class="progress-bar w-3" role="progressbar" aria-valuenow="3" aria-valuemin="0" aria-valuemax="100"></div>
+          </div>
+         <!-- Image part  -->
+         {% load static %}
+         <img class="img-fluid" src="{% static 'mentor/astrope.png' %}" alt="Astrope pic"/>
+        </div>
+        </section>
+      </div>
+    {% endblock %}

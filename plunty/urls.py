@@ -23,5 +23,6 @@ urlpatterns = [
     path('social/', include('social.urls')),
     path('social/', include('django.contrib.auth.urls')),
     path('projects/', include('projects.urls')),
+    path('mentor/', include('mentor.urls')),
     path('', RedirectView.as_view(url='social/', permanent=True)),
 ]

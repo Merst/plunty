@@ -37,6 +37,7 @@ INSTALLED_APPS = [
     'myresume.apps.MyresumeConfig',
     'projects.apps.ProjectsConfig',
     'social.apps.SocialConfig',
+    'mentor.apps.MentorConfig',
     'django.contrib.admin',
 ]
 
@@ -51,6 +52,10 @@ MIDDLEWARE = [
 ]
 
 ROOT_URLCONF = 'plunty.urls'
+STATIC_URL = 'static/'
+STATICFILES_DIRS = [
+    BASE_DIR / "static",
+]
 
 TEMPLATES = [
     {

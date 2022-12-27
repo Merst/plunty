@@ -1,0 +1,15 @@
+{% extends "mentor/mentor.html" %}
+
+{% block content %}
+  {% if attempt_list %}
+  <ul>
+    {% for attempt in attempt_list %}
+      <li>
+        {{ attempt.id }} {{attempt.area}}
+      </li>
+    {% endfor %}
+  </ul>
+  {% else %}
+    <p>There are no attempts in the list at the moment.</p>
+  {% endif %}
+{% endblock %}
